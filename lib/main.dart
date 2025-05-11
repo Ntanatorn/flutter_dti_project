@@ -23,7 +23,7 @@ class _FlutterDtiProjectState extends State<FlutterDtiProject> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoginUi(), // กำหนดหน้าจอเริ่มต้นของ App
+      home: WelcomeUi(), // กำหนดหน้าจอเริ่มต้นของ App
       theme: ThemeData(
         textTheme: GoogleFonts.kanitTextTheme(
           Theme.of(context).textTheme,

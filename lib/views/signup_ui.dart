@@ -1,6 +1,7 @@
 // ignore_for_file: sort_child_properties_last
 
 import 'package:flutter/material.dart';
+import 'package:flutter_dti_project/views/login_ui.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class SignupUi extends StatefulWidget {
@@ -15,185 +16,214 @@ class _SignupUiState extends State<SignupUi> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Padding(
-        padding: const EdgeInsets.only(
-          left: 40,
-          right: 40,
-        ),
-        child: Center(
-          child: Column(
-            children: [
-              SizedBox(
-                height: 40,
-              ),
-              Align(
-                alignment: Alignment.centerLeft,
-                child: InkWell(
-                  onTap: (){},
-                  child: Icon(
-                    Icons.arrow_back_ios,
-                    color: Colors.black,
-                    size: 30,
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.only(
+            left: 40,
+            right: 40,
+          ),
+          child: Center(
+            child: Column(
+              children: [
+                SizedBox(
+                  height: 40,
+                ),
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: Icon(
+                      Icons.arrow_back_ios,
+                      color: Colors.black,
+                      size: 30,
+                    ),
                   ),
                 ),
-              ),
-              Align(
-                alignment: Alignment.centerLeft,
-                child: Image.asset(
-                  'assets/images/logo.png',
-                  width: 200.0,
-                ),
-              ),
-              Align(
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Get On Board!',
-                  style: TextStyle(
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold,
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Image.asset(
+                    'assets/images/logo.png',
+                    width: 200.0,
                   ),
                 ),
-              ),
-              Align(
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Create your profile to start your journey',
-                  style: TextStyle(
-                    fontSize: 15,
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Get On Board!',
+                    style: TextStyle(
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
-              ),
-              SizedBox(
-                height: 40,
-              ),
-              TextField(
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  prefixIcon: Icon(
-                    Icons.person_2_outlined,
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Create your profile to start your journey',
+                    style: TextStyle(
+                      fontSize: 15,
+                    ),
                   ),
-                  hintText: 'Username',
-                  labelText: 'Full Name',
                 ),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              TextField(
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  prefixIcon: Icon(
-                    FontAwesomeIcons.envelope,
-                  ),
-                  hintText: 'EmailUser',
-                  labelText: 'Email',
+                SizedBox(
+                  height: 40,
                 ),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              TextField(
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  prefixIcon: Icon(
-                    FontAwesomeIcons.hashtag,
-                  ),
-                  hintText: 'PhoneNum',
-                  labelText: 'Phone NO.',
-                ),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              TextField(
-                obscureText: true,
-                decoration: InputDecoration(
+                TextField(
+                  decoration: InputDecoration(
                     border: OutlineInputBorder(),
-                    prefixIcon: Icon(FontAwesomeIcons.fingerprint),
-                    hintText: 'Password',
-                    labelText: 'Password',
-                    suffixIcon: IconButton(
-                      icon: Icon(
-                        Icons.remove_red_eye,
+                    prefixIcon: Icon(
+                      Icons.person_2_outlined,
+                    ),
+                    hintText: 'Username',
+                    labelText: 'Full Name',
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                TextField(
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    prefixIcon: Icon(
+                      FontAwesomeIcons.envelope,
+                    ),
+                    hintText: 'EmailUser',
+                    labelText: 'Email',
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                TextField(
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    prefixIcon: Icon(
+                      FontAwesomeIcons.hashtag,
+                    ),
+                    hintText: 'PhoneNum',
+                    labelText: 'Phone NO.',
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                TextField(
+                  obscureText: true,
+                  decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      prefixIcon: Icon(FontAwesomeIcons.fingerprint),
+                      hintText: 'Password',
+                      labelText: 'Password',
+                      suffixIcon: IconButton(
+                        icon: Icon(
+                          Icons.remove_red_eye,
+                        ),
+                        onPressed: () {},
+                      )),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: InkWell(
+                    onTap: () {},
+                    child: Text(
+                      'Forgot Password?',
+                      style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.blueAccent),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                ElevatedButton(
+                  onPressed: () {},
+                  child: Text(
+                    'SignUp',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    fixedSize: Size(
+                      MediaQuery.of(context).size.width,
+                      55,
+                    ),
+                    backgroundColor: Colors.black,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Text(
+                  "OR",
+                  style: TextStyle(
+                    fontSize: 20,
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                OutlinedButton(
+                  onPressed: () {},
+                  style: OutlinedButton.styleFrom(
+                    fixedSize: Size(
+                      MediaQuery.of(context).size.width,
+                      55,
+                    ),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                  ),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Image.asset(
+                        'assets/images/googlelogo.png',
+                        width: 24.0, // Adjust as needed
                       ),
-                      onPressed: () {},
-                    )),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              ElevatedButton(
-                onPressed: () {},
-                child: Text(
-                  'SignUp',
-                  style: TextStyle(color: Colors.white),
-                ),
-                style: ElevatedButton.styleFrom(
-                  fixedSize: Size(
-                    MediaQuery.of(context).size.width,
-                    55,
-                  ),
-                  backgroundColor: Colors.black,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
+                      Text(
+                        '   Sign-In with Google',
+                        style: TextStyle(color: Colors.black),
+                      ),
+                    ],
                   ),
                 ),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Text(
-                "OR",
-                style: TextStyle(
-                  fontSize: 20,
+                SizedBox(
+                  height: 20,
                 ),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              OutlinedButton(
-                onPressed: () {},
-                style: OutlinedButton.styleFrom(
-                  fixedSize: Size(
-                    MediaQuery.of(context).size.width,
-                    55,
-                  ),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                ),
-                child: Row(
+                Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    Image.asset(
-                      'assets/images/googlelogo.png',
-                      width: 24.0, // Adjust as needed
-                    ),
                     Text(
-                      '   Sign-In with Google',
+                      "Already have an Account?",
                       style: TextStyle(color: Colors.black),
+                    ),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => LoginUi(),
+                          ),
+                        );
+                      },
+                      child: Text(
+                        '   LOGIN',
+                        style: TextStyle(color: Colors.blueAccent),
+                      ),
                     ),
                   ],
                 ),
-              ),
-              SizedBox(height: 20),
-              Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Text(
-                    "Already have an Account?",
-                    style: TextStyle(color: Colors.black),
-                  ),
-                  InkWell(
-                    onTap: () {},
-                    child: Text(
-                      '   LOGIN',
-                      style: TextStyle(color: Colors.blueAccent),
-                    ),
-                  ),
-                ],
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
